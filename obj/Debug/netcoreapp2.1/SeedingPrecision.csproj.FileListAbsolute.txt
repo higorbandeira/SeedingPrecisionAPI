@@ -1,0 +1,54 @@
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.deps.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.dev.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.dll
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.pdb
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.csprojAssemblyReference.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfoInputs.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfo.cs
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.csproj.CoreCompileInputs.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorAssemblyInfo.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorAssemblyInfo.cs
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorTargetAssemblyInfo.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.dll
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.pdb
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.genruntimeconfig.cache
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.deps.json
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.json
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.dev.json
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.dll
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.pdb
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.csprojAssemblyReference.cache
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfoInputs.cache
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfo.cs
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.csproj.CoreCompileInputs.cache
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorAssemblyInfo.cache
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorAssemblyInfo.cs
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorTargetAssemblyInfo.cache
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.dll
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.pdb
+D:\Projetos\CosmosDBTutorial-master - Copia\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.genruntimeconfig.cache
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.deps.json
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.json
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.dev.json
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.dll
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\SeedingPrecision.pdb
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.csprojAssemblyReference.cache
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfoInputs.cache
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfo.cs
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.csproj.CoreCompileInputs.cache
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorAssemblyInfo.cache
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorAssemblyInfo.cs
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorTargetAssemblyInfo.cache
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.dll
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.pdb
+D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrecision.genruntimeconfig.cache

@@ -1,0 +1,17 @@
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\MyAwesomeWebApi.deps.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\MyAwesomeWebApi.runtimeconfig.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\MyAwesomeWebApi.runtimeconfig.dev.json
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\MyAwesomeWebApi.dll
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\bin\Debug\netcoreapp2.1\MyAwesomeWebApi.pdb
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.AssemblyInfoInputs.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.AssemblyInfo.cs
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.csproj.CoreCompileInputs.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.RazorAssemblyInfo.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.RazorAssemblyInfo.cs
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.RazorTargetAssemblyInfo.cache
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.dll
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.pdb
+D:\Projetos\CosmosDBTutorial-master\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\MyAwesomeWebApi.genruntimeconfig.cache
