@@ -13091,11 +13091,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\SeedingPrecision\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
+      "projectUniqueName": "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
       "projectName": "SeedingPrecision",
-      "projectPath": "D:\\Projetos\\SeedingPrecision\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
+      "projectPath": "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
       "packagesPath": "C:\\Users\\higor\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\SeedingPrecision\\SeedingPrecisionAPI\\obj\\",
+      "outputPath": "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\higor\\AppData\\Roaming\\NuGet\\NuGet.Config",
