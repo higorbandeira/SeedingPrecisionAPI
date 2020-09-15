@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yxHjYHsCP48s0gPxTbO8Vn3BBfWIOwHad79zfi3sChKJnFm0ILNkKL+g/rLaRJVIx6MZzVyLjs2NzB5Gohs0+A==",
+  "dgSpecHash": "6FbbFtZlIvD35z8NuaERcmyOthbmjnSjG7fzFoP7hm3RAM94bM1ofmkTA8oHlHtXLGXONd6NpR0DYu/IkJRnlw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
+  "projectFilePath": "C:\\Users\\higor\\source\\repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\higor\\.nuget\\packages\\aspnetcore.identity.mongo\\2.5.1\\aspnetcore.identity.mongo.2.5.1.nupkg.sha512",
     "C:\\Users\\higor\\.nuget\\packages\\dnsclient\\1.0.7\\dnsclient.1.0.7.nupkg.sha512",

@@ -55,14 +55,6 @@ D:\Projetos\SeedingPrecision\MyAwesomeWebApi\obj\Debug\netcoreapp2.1\SeedingPrec
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\angular.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\e2e\tsconfig.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\package-lock.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\package.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\tsconfig.app.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\tsconfig.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\tsconfig.spec.json
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\my-app\tslint.json
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\SeedingPrecision.deps.json
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.json
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.dev.json

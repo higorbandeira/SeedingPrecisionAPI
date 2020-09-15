@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj": {}
+    "C:\\Users\\higor\\source\\repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj": {}
   },
   "projects": {
-    "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj": {
+    "C:\\Users\\higor\\source\\repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
+        "projectUniqueName": "C:\\Users\\higor\\source\\repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
         "projectName": "SeedingPrecision",
-        "projectPath": "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
+        "projectPath": "C:\\Users\\higor\\source\\repos\\higorbandeira\\SeedingPrecisionAPI\\SeedingPrecision.csproj",
         "packagesPath": "C:\\Users\\higor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\higor\\Source\\Repos\\higorbandeira\\SeedingPrecisionAPI\\obj\\",
+        "outputPath": "C:\\Users\\higor\\source\\repos\\higorbandeira\\SeedingPrecisionAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\higor\\AppData\\Roaming\\NuGet\\NuGet.Config",
