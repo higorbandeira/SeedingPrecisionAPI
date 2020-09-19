@@ -15,7 +15,7 @@ using SeedingPrecision.Models.Responses;
 
 namespace SeedingPrecision.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/user")]
     public class UserController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -31,7 +31,7 @@ namespace SeedingPrecision.Controllers
 
         // GET api/user/userdata
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        [HttpGet]
+        [HttpGet("getAll")]
         public async Task<ActionResult> UserData()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -45,7 +45,7 @@ namespace SeedingPrecision.Controllers
         }
 
         // POST api/user/register
-        [HttpPost]
+        [HttpPost("register")]
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody]RegisterEntity model)
         {
@@ -69,7 +69,7 @@ namespace SeedingPrecision.Controllers
 
 
         // POST api/user/login
-        [HttpPost]
+        [HttpPost("login")]
         [AllowAnonymous]
         public async Task<ActionResult> Login([FromBody]LoginEntity model)
         {
@@ -81,7 +81,7 @@ namespace SeedingPrecision.Controllers
                     var appUser = _userManager.Users.SingleOrDefault(r => r.UserName == model.UserName);
                     var token = AuthenticationHelper.GenerateJwtToken(model.UserName, appUser, _configuration);
 
-                    var rootData = new LoginResponse(token, appUser.Name, appUser.UserName);
+                    var rootData = new LoginResponse(token, appUser.UserName);
                     return Ok(rootData);
                 }
                 return StatusCode((int)HttpStatusCode.Unauthorized, "Bad Credentials");

@@ -3,7 +3,7 @@ namespace SeedingPrecision.Models.Responses
 {
     public class LoginResponse
     {
-        public LoginResponse(string token, string name, string userName)
+        public LoginResponse(string token, string userName)
         {
             Token = token;
             UserName = userName;

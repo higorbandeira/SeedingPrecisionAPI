@@ -82,7 +82,6 @@ namespace SeedingPrecision
             {
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseMvc();
         }
