@@ -19,7 +19,7 @@ namespace SeedingPrecision.Controllers
         [HttpGet("mobileData")]
         public async Task<ActionResult> MobileData()
         {
-            var client = new RestClient("http://23.102.129.195:1026/v2/entities");
+            var client = new RestClient("http://104.215.116.161:1026/v2/entities");
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
             request.AddHeader("Accept", "application/json");
