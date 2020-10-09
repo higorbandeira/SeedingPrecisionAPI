@@ -60,7 +60,6 @@ C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcorea
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\SeedingPrecision.runtimeconfig.dev.json
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\SeedingPrecision.dll
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\bin\Debug\netcoreapp2.1\SeedingPrecision.pdb
-C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.csprojAssemblyReference.cache
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfoInputs.cache
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.AssemblyInfo.cs
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.RazorAssemblyInfo.cache
@@ -70,3 +69,4 @@ C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcorea
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.pdb
 C:\Users\higor\Source\Repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.genruntimeconfig.cache
 C:\Users\higor\source\repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.csproj.CoreCompileInputs.cache
+C:\Users\higor\source\repos\higorbandeira\SeedingPrecisionAPI\obj\Debug\netcoreapp2.1\SeedingPrecision.csprojAssemblyReference.cache
