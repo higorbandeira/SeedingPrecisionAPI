@@ -16,6 +16,7 @@ using SeedingPrecision.Models.Responses;
 
 namespace SeedingPrecision.Controllers
 {
+    [EnableCors("AllowAllHeaders")]
     [Route("api/user")]
     public class UserController : Controller
     {
