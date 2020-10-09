@@ -78,7 +78,8 @@ namespace SeedingPrecision
                           builder.AllowAnyOrigin()
                                  .AllowAnyHeader()
                                  .AllowAnyMethod()
-                                 .AllowCredentials();
+                                 .AllowCredentials()
+                                 .DisallowCredentials();
                       });
             });
         }
