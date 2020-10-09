@@ -85,7 +85,7 @@ namespace SeedingPrecision.Controllers
                     var rootData = new LoginResponse(token, appUser.UserName);
                     return Ok(rootData);
                 }
-                return StatusCode((int)HttpStatusCode.Unauthorized, "Bad Credentials");
+                return StatusCode((int)HttpStatusCode.Unauthorized, "Bad Credentials ");
             }
             string errorMessage = string.Join(", ", ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage));
             return BadRequest(errorMessage ?? "Bad Request");
