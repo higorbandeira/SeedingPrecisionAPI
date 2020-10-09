@@ -73,7 +73,7 @@ namespace SeedingPrecision.Controllers
         // POST api/user/login
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<ActionResult> Login([FromBody]LoginEntity model)
+        public async Task<ActionResult<LoginResponse>> Login([FromBody]LoginEntity model)
         {
             if (ModelState.IsValid)
             {
