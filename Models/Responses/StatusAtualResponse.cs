@@ -3,7 +3,7 @@ using static SeedingPrecision.Models.Responses.AtributesResponse;
 
 namespace SeedingPrecision.Models.Responses
 {
-    public class MyArray
+    public class StatusAtualResponse
     {
         public string id { get; set; }
         public string type { get; set; }
