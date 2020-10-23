@@ -35,11 +35,11 @@ namespace SeedingPrecision
             services.AddMongoIdentityProvider<ApplicationUser, ApplicationRole>
             (Configuration.GetConnectionString("MongoDbDatabase"), options =>
             {
-                options.Password.RequiredLength = 6;
-                options.Password.RequireLowercase = true;
-                options.Password.RequireUppercase = true;
-                options.Password.RequireNonAlphanumeric = true;
-                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 1;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false ;
             });
 
             // Add Jwt Authentication
