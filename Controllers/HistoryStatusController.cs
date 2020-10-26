@@ -31,11 +31,9 @@ namespace SeedingPrecision.Controllers
 
         [HttpGet]
         public List<HistoryStatus> GetHistoryStatus()
-        {
-            int aux;
+        {          
             var Historys = historyStatusService.Find(e => true).ToList();
-            return Historys;
-            
+            return Historys;            
         }
     }
 }
