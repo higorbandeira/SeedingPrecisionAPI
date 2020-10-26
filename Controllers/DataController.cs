@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 using SeedingPrecision.Models.Responses;
 using SeedingPrecision.Service;
 using System;
@@ -22,5 +23,6 @@ namespace SeedingPrecision.Controllers
             var result = await service.LoadData();
             return Ok(result);
         }
+
     }
 }

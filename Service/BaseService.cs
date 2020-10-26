@@ -7,6 +7,8 @@ namespace SeedingPrecision.Service
 {
     public class BaseService
     {
-        public string IPHelix = "http://104.215.116.161:1026";
+        public string IPHelix = "http://143.107.145.24:1026";
+        public string IMongoDb = "http://143.107.145.24:27000";
+
     }
 }

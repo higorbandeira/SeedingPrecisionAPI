@@ -25,5 +25,6 @@ namespace SeedingPrecision.Service
 
             return myDeserializedClass;
         }
+      
     }
 }
