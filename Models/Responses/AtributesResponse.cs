@@ -44,6 +44,11 @@ namespace SeedingPrecision.Models.Responses
             public string type { get; set; }
             public double value { get; set; }
             public Metadata metadata { get; set; }
+
+            public static implicit operator TempSolo(TempAmbiente v)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         public class PH

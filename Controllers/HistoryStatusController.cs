@@ -11,29 +11,16 @@ using System.Threading.Tasks;
 
 namespace SeedingPrecision.Controllers
 {
-    [Route("api/")]
+    [Route("apiHistory/")]
     public class HistoryStatusController
     {
 
-        private const string dbName = "sth_helixiot";
-        private const string COLLECTION_NAME = "sth_/_urn:ngsi-ld:entity:001_iot";
-        private readonly IMongoCollection<HistoryStatus> historyStatusService;
-        
-        public HistoryStatusController(IConfiguration configuration)
-        {
-            var ConectionString = configuration.GetConnectionString("ConnectionStrings:MongoDbDatabase");
-            var MongoClient = new MongoClient(ConectionString);
-            var dataBase = MongoClient.GetDatabase(dbName);
-
-            historyStatusService = dataBase.GetCollection<HistoryStatus>(COLLECTION_NAME);
-        }
-
-
-        [HttpGet]
-        public List<HistoryStatus> GetHistoryStatus()
-        {          
-            var Historys = historyStatusService.Find(e => true).ToList();
-            return Historys;            
+        static IConfiguration configuration;
+        [HttpGet("listStatusHistory")]
+        public List<StatusAtualResponse> ListStatusHistory(string NumberOfTable)
+        {           
+            HistoryStatusService hss = new HistoryStatusService(configuration, NumberOfTable);
+            return hss.AjusteHistorys();
         }
     }
 }
