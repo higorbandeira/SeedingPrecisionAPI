@@ -35,7 +35,7 @@ namespace SeedingPrecision.Service
             return Historys;
         }
             
-        public List<StatusAtualResponse> AjusteHistorys()
+        public async Task<List<StatusAtualResponse>> AjusteHistorys()
         {
            
             List<HistoryStatus> his = GetHistoryStatus().OrderBy(a => a.recvTime).ToList();

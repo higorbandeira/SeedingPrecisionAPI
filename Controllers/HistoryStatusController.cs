@@ -12,15 +12,16 @@ using System.Threading.Tasks;
 namespace SeedingPrecision.Controllers
 {
     [Route("apiHistory/")]
-    public class HistoryStatusController
+    public class HistoryStatusController : Controller
     {
 
         static IConfiguration configuration;
         [HttpGet("listStatusHistory")]
-        public List<StatusAtualResponse> ListStatusHistory(string NumberOfTable)
+        public async Task<ActionResult<List<StatusAtualResponse>>> ListStatusHistory(string NumberOfTable)
         {           
             HistoryStatusService hss = new HistoryStatusService(configuration, NumberOfTable);
-            return hss.AjusteHistorys();
+            var result = await hss.AjusteHistorys();
+            return Ok(result);
         }
     }
 }
