@@ -24,5 +24,12 @@ namespace SeedingPrecision.Controllers
             return Ok(result);
         }
 
+        [HttpGet("listStatusHistory/{NumberOfTable}")]
+        public async Task<ActionResult<List<StatusAtualResponse>>> ListStatusHistory(string NumberOfTable)
+        {
+            HistoryStatusService hss = new HistoryStatusService();
+            var result = await hss.GetHistoryStatus(NumberOfTable);
+            return Ok(result);
+        }
     }
 }

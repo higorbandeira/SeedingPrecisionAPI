@@ -12,33 +12,24 @@ namespace SeedingPrecision.Service
 {
     public class HistoryStatusService
     {
-        
-
-
-        private const string dbName = "sth_helixiot";
-        private readonly IMongoCollection<HistoryStatus> historyStatusService;
-
-        public HistoryStatusService(IConfiguration configuration, string NumberOfTable)
+        public async Task<List<StatusAtualResponse>> GetHistoryStatus(string NumberOfTable)
         {
+            // VARIABLES
+            string dbName = "sth_helixiot";
+            IMongoCollection<HistoryStatus> historyStatusService;
+
+            //CONNECTION
             string COLLECTION_NAME = "sth_/_urn:ngsi-ld:entity:" + NumberOfTable + "_iot";
             var ConectionString = "mongodb://helix:H3l1xNG@143.107.145.24:27000/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false";//configuration.GetConnectionString("ConnectionStrings:MongoDbDatabase");
             var MongoClient = new MongoClient(ConectionString);
             var dataBase = MongoClient.GetDatabase(dbName);
 
+            //GET DOCUMENT
             historyStatusService = dataBase.GetCollection<HistoryStatus>(COLLECTION_NAME);
-        }
 
-        [HttpGet("GetHistoryStatus")]
-        public List<HistoryStatus> GetHistoryStatus()
-        {
             var Historys = historyStatusService.Find(e => true).ToList();
-            return Historys;
-        }
-            
-        public async Task<List<StatusAtualResponse>> AjusteHistorys()
-        {
-           
-            List<HistoryStatus> his = GetHistoryStatus().OrderBy(a => a.recvTime).ToList();
+
+            List<HistoryStatus> his = Historys.OrderBy(a => a.recvTime).ToList();
             List<StatusAtualResponse> STR = new List<StatusAtualResponse>();
             StatusAtualResponse statusAtualResponse = new StatusAtualResponse();
             DateTime data = his.First().recvTime;
@@ -50,6 +41,7 @@ namespace SeedingPrecision.Service
                     STR.Add(statusAtualResponse);
                     statusAtualResponse = new StatusAtualResponse();
                     data = hs.recvTime;
+
                 }
                 switch (hs.attrName)
                 {
