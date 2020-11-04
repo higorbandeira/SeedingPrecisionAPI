@@ -20,17 +20,19 @@ namespace SeedingPrecision.Service
 
         public HistoryStatusService(IConfiguration configuration, string NumberOfTable)
         {
+            // VARIABLES
+            string dbName = "sth_helixiot";
+            IMongoCollection<HistoryStatus> historyStatusService;
+
+            //CONNECTION
             string COLLECTION_NAME = "sth_/_urn:ngsi-ld:entity:" + NumberOfTable + "_iot";
             var ConectionString = "mongodb://helix:H3l1xNG@143.107.145.24:27000/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false";//configuration.GetConnectionString("ConnectionStrings:MongoDbDatabase");
             var MongoClient = new MongoClient(ConectionString);
             var dataBase = MongoClient.GetDatabase(dbName);
 
+            //GET DOCUMENT
             historyStatusService = dataBase.GetCollection<HistoryStatus>(COLLECTION_NAME);
-        }
 
-        [HttpGet("GetHistoryStatus")]
-        public List<HistoryStatus> GetHistoryStatus()
-        {
             var Historys = historyStatusService.Find(e => true).ToList();
             return Historys;
         }
@@ -50,6 +52,7 @@ namespace SeedingPrecision.Service
                     STR.Add(statusAtualResponse);
                     statusAtualResponse = new StatusAtualResponse();
                     data = hs.recvTime;
+
                 }
                 switch (hs.attrName)
                 {
