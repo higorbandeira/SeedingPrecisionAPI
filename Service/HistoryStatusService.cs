@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace SeedingPrecision.Service
 {
-    public class HistoryStatusService
+    public class HistoryStatusService: BaseService
     {
-        
+
 
 
         private const string dbName = "sth_helixiot";
@@ -34,10 +34,10 @@ namespace SeedingPrecision.Service
             var Historys = historyStatusService.Find(e => true).ToList();
             return Historys;
         }
-            
+
         public async Task<List<StatusAtualResponse>> AjusteHistorys()
         {
-           
+
             List<HistoryStatus> his = GetHistoryStatus().OrderBy(a => a.recvTime).ToList();
             List<StatusAtualResponse> STR = new List<StatusAtualResponse>();
             StatusAtualResponse statusAtualResponse = new StatusAtualResponse();
@@ -90,6 +90,20 @@ namespace SeedingPrecision.Service
 
             }
             return STR;
+        }
+        public async Task<IEnumerable<SensorModel>> TakeHistorysBySensor(string Sensor)
+        {
+            List<HistoryStatus> his = GetHistoryStatus().OrderBy(a => a.recvTime).Where(a=>a.attrName == Sensor).ToList();
+
+            var result = from a in his
+                         select new SensorModel
+                         {
+                             Sensor = a.attrName,
+                             Valor = Convert.ToDouble(a.attrValue),
+                             Data = a.recvTime
+                         };
+            return result;
+
         }
     }
 }

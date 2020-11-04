@@ -23,5 +23,30 @@ namespace SeedingPrecision.Controllers
             var result = await hss.AjusteHistorys();
             return Ok(result);
         }
+
+        [HttpGet("takeHistorysBySensor")]
+        public async Task<ActionResult<List<SensorModel>>> TakeHistorysBySensor(string NumberOfTable, string sensor)
+        {
+            HistoryStatusService hss = new HistoryStatusService(configuration, NumberOfTable);
+            var result = await hss.TakeHistorysBySensor(sensor);
+            return Ok(result);
+        }
+
+        [HttpGet("takeHistorysAllSensors")]
+        public async Task<ActionResult<List<List<SensorModel>>>> TakeHistorysAllSensors(string NumberOfTable)
+        {
+            string[] listaSensores = { "pH", "luminosidade", "tempSolo", "tempAmbiente", "humidSolo", "humidAmbiente" };
+            HistoryStatusService hss = new HistoryStatusService(configuration, NumberOfTable);
+            List<List<SensorModel>> result = new List<List<SensorModel>> { };
+
+            foreach (string sensor in listaSensores)
+            {
+                var aux = await hss.TakeHistorysBySensor(sensor);
+                result.Add(aux.ToList());
+            }
+            return Ok(result);
+        }
+
+
     }
 }
