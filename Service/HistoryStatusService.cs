@@ -18,6 +18,8 @@ namespace SeedingPrecision.Service
         private const string dbName = "sth_helixiot";
         private readonly IMongoCollection<HistoryStatus> historyStatusService;
 
+        List<HistoryStatus> his;
+
         public HistoryStatusService(IConfiguration configuration, string NumberOfTable)
         {
             // VARIABLES
@@ -33,14 +35,14 @@ namespace SeedingPrecision.Service
             //GET DOCUMENT
             historyStatusService = dataBase.GetCollection<HistoryStatus>(COLLECTION_NAME);
 
-            var Historys = historyStatusService.Find(e => true).ToList();
-            return Historys;
+            his = historyStatusService.Find(e => true).ToList();
+         
         }
 
         public async Task<List<StatusAtualResponse>> AjusteHistorys()
         {
 
-            List<HistoryStatus> his = GetHistoryStatus().OrderBy(a => a.recvTime).ToList();
+            his = his.OrderBy(a => a.recvTime).ToList();
             List<StatusAtualResponse> STR = new List<StatusAtualResponse>();
             StatusAtualResponse statusAtualResponse = new StatusAtualResponse();
             DateTime data = his.First().recvTime;
@@ -96,7 +98,7 @@ namespace SeedingPrecision.Service
         }
         public async Task<IEnumerable<SensorModel>> TakeHistorysBySensor(string Sensor)
         {
-            List<HistoryStatus> his = GetHistoryStatus().OrderBy(a => a.recvTime).Where(a=>a.attrName == Sensor).ToList();
+            his = his.OrderBy(a => a.recvTime).Where(a=>a.attrName == Sensor).ToList();
 
             var result = from a in his
                          select new SensorModel
