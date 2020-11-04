@@ -33,7 +33,7 @@ namespace SeedingPrecision.Controllers
             var result = await hss.AjusteHistorys();
             return Ok(result);
         }
-        [HttpGet("listStatusPerSensor/{NumberOfTable,sensor}")]
+        [HttpGet("listStatusPerSensor")]
         public async Task<ActionResult<List<SensorModel>>> ListStatusPerSensor(string NumberOfTable, string sensor)
         {
             HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable);
@@ -41,7 +41,7 @@ namespace SeedingPrecision.Controllers
             return Ok(result);
         }
 
-        [HttpGet("listAllStatusPerSensor/{NumberOfTable}")]
+        [HttpGet("listAllStatusPerSensor")]
         public async Task<ActionResult<List<List<SensorModel>>>> ListAllStatusPerSensor(string NumberOfTable)
         {
             List<IEnumerable<SensorModel>> result = new List<IEnumerable<SensorModel>> { };

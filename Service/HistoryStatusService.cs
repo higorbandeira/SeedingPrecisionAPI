@@ -98,9 +98,9 @@ namespace SeedingPrecision.Service
         }
         public async Task<IEnumerable<SensorModel>> TakeHistorysBySensor(string Sensor)
         {
-            his = his.OrderBy(a => a.recvTime).Where(a=>a.attrName == Sensor).ToList();
+            var hisfiltrado = his.OrderBy(a => a.recvTime).Where(a=>a.attrName == Sensor).ToList();
 
-            var result = from a in his
+            var result = from a in hisfiltrado
                          select new SensorModel
                          {
                              Sensor = a.attrName,
