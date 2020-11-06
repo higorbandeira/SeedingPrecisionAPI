@@ -26,27 +26,35 @@ namespace SeedingPrecision.Controllers
             return Ok(result);
         }
 
-        [HttpGet("listStatusHistory/{NumberOfTable}")]
-        public async Task<ActionResult<List<StatusAtualResponse>>> ListStatusHistory(string NumberOfTable)
+        [HttpGet("listStatusHistory")]
+        public async Task<ActionResult<List<StatusHistoryRsponse>>> ListStatusHistory(string NumberOfTable, string StartDate, string EndDate)
         {
-            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable);
+            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable, StartDate, EndDate);
             var result = await hss.AjusteHistorys();
             return Ok(result);
         }
         [HttpGet("listStatusPerSensor")]
-        public async Task<ActionResult<List<SensorModel>>> ListStatusPerSensor(string NumberOfTable, string sensor)
+        public async Task<ActionResult<List<SensorModel>>> ListStatusPerSensor(string NumberOfTable, string sensor, string StartDate, string EndDate)
         {
-            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable);
+            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable, StartDate, EndDate);
             var result = await hss.TakeHistorysBySensor(sensor);
             return Ok(result);
         }
 
+        public class filtro
+        {
+            public string NumberOfTable { get; set; }
+            public DateTime? StartDate { get; set; }
+            public DateTime? EndDate { get; set; }
+
+        }
+
         [HttpGet("listAllStatusPerSensor")]
-        public async Task<ActionResult<List<List<SensorModel>>>> ListAllStatusPerSensor(string NumberOfTable)
+        public async Task<ActionResult<List<List<SensorModel>>>> ListAllStatusPerSensor(string NumberOfTable, string StartDate, string EndDate)
         {
             List<IEnumerable<SensorModel>> result = new List<IEnumerable<SensorModel>> { };
             string[] Sensores = { "pH", "luminosidade", "tempSolo", "tempAmbiente", "humidSolo", "humidAmbiente" };
-            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable);
+            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable,StartDate,EndDate) ;
 
             foreach(string sensor in Sensores)
             {
