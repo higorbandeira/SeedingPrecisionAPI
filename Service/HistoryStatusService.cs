@@ -27,7 +27,6 @@ namespace SeedingPrecision.Service
             IMongoCollection<HistoryStatus> historyStatusService;
 
             //CONNECTION
-            
             string COLLECTION_NAME = "sth_/_" + NumberOfTable + "_iot";
             var ConectionString = "mongodb://helix:H3l1xNG@143.107.145.24:27000/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false";//configuration.GetConnectionString("ConnectionStrings:MongoDbDatabase");
             var MongoClient = new MongoClient(ConectionString);
@@ -37,15 +36,16 @@ namespace SeedingPrecision.Service
             historyStatusService = dataBase.GetCollection<HistoryStatus>(COLLECTION_NAME);
 
             his = historyStatusService.Find(e => true).ToList().OrderBy(a => a.recvTime).ToList();
-            
+            StartDate = StartDate != "null" ? StartDate : null;
+            EndDate = EndDate != "null" ? EndDate : null;
             if (!String.IsNullOrEmpty(StartDate))
             {
-                DateTime data = Convert.ToDateTime(StartDate);
+                DateTime data = DateTime.Parse(StartDate);
                 his = his.Where(a => a.recvTime >= data).ToList();
             }
             if (!String.IsNullOrEmpty(EndDate))
             {
-                DateTime data = Convert.ToDateTime(EndDate);
+                DateTime data = DateTime.Parse(EndDate);
                 his = his.Where(a => a.recvTime <= data).ToList();
             }
         }

@@ -25,11 +25,17 @@ namespace SeedingPrecision.Controllers
             var result = await service.LoadData();
             return Ok(result);
         }
-
-        [HttpGet("listStatusHistory")]
-        public async Task<ActionResult<List<StatusHistoryRsponse>>> ListStatusHistory(string NumberOfTable, string StartDate, string EndDate)
+        public class filtros
         {
-            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable, StartDate, EndDate);
+            public string NumberOfTable { get; set; }
+            public string StartDate { get; set; }
+            public string EndDate { get; set; }
+        }
+
+        [HttpPost("listStatusHistory")]
+        public async Task<ActionResult<List<StatusHistoryRsponse>>> ListStatusHistory([FromBody]filtros filter)
+        {
+            HistoryStatusService hss = new HistoryStatusService(_configuration, filter.NumberOfTable, filter.StartDate, filter.EndDate);
             var result = await hss.AjusteHistorys();
             return Ok(result);
         }
