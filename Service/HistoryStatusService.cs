@@ -48,6 +48,7 @@ namespace SeedingPrecision.Service
                 DateTime data = DateTime.Parse(EndDate);
                 his = his.Where(a => a.recvTime <= data).ToList();
             }
+
         }
         private void zeraVetores(double[] doubles, int[] ints, bool[] bools)
         {
