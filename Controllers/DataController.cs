@@ -13,8 +13,7 @@ namespace SeedingPrecision.Controllers
 {
     [Route("api/")]
     public class DataController : Controller
-    {
-        private readonly IConfiguration _configuration;
+    {        
         // GET api/user/userdata
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [AllowAnonymous]
@@ -30,19 +29,28 @@ namespace SeedingPrecision.Controllers
             public string NumberOfTable { get; set; }
             public string StartDate { get; set; }
             public string EndDate { get; set; }
+            public string Agrupamento { get; set; }
         }
 
         [HttpPost("listStatusHistory")]
-        public async Task<ActionResult<List<StatusHistoryRsponse>>> ListStatusHistory([FromBody]filtros filter)
+        public async Task<ActionResult<StatusHistoryRsponse>> ListStatusHistory([FromBody]filtros filter)
         {
-            HistoryStatusService hss = new HistoryStatusService(_configuration, filter.NumberOfTable, filter.StartDate, filter.EndDate);
-            var result = await hss.AjusteHistorys();
+            HistoryStatusService hss = new HistoryStatusService(filter.NumberOfTable, filter.StartDate, filter.EndDate);
+            StatusHistoryRsponse result;
+            if (hss.his.Count > 0)
+            {
+                 result = await hss.AjusteHistorys(filter.Agrupamento);
+            }
+            else
+            {
+                result = new StatusHistoryRsponse();
+            }
             return Ok(result);
         }
         [HttpGet("listStatusPerSensor")]
         public async Task<ActionResult<List<SensorModel>>> ListStatusPerSensor(string NumberOfTable, string sensor, string StartDate, string EndDate)
         {
-            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable, StartDate, EndDate);
+            HistoryStatusService hss = new HistoryStatusService(NumberOfTable, StartDate, EndDate);
             var result = await hss.TakeHistorysBySensor(sensor);
             return Ok(result);
         }
@@ -60,7 +68,7 @@ namespace SeedingPrecision.Controllers
         {
             List<IEnumerable<SensorModel>> result = new List<IEnumerable<SensorModel>> { };
             string[] Sensores = { "pH", "luminosidade", "tempSolo", "tempAmbiente", "humidSolo", "humidAmbiente" };
-            HistoryStatusService hss = new HistoryStatusService(_configuration, NumberOfTable,StartDate,EndDate) ;
+            HistoryStatusService hss = new HistoryStatusService(NumberOfTable,StartDate,EndDate) ;
 
             foreach(string sensor in Sensores)
             {
