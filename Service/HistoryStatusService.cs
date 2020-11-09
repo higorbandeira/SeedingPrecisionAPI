@@ -264,7 +264,7 @@ namespace SeedingPrecision.Service
                                     contadores[0]++;
                                     hs.attrValue = hs.attrValue.Replace(".", ",");
                                     dadosAgroup[0] += Ultil.AjustaPH(Convert.ToDouble(hs.attrValue));
-                                    NotNull[0] = false;
+                                    NotNull[0] = false; 
                                 }
                                 break;
                             case "luminosidade":
