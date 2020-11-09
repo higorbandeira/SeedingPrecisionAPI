@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace SeedingPrecision.Service
 {
     public class HistoryStatusService : BaseService
@@ -295,7 +296,7 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[0]++;
-                                    dadosAgroup[0] += Convert.ToDouble(hs.attrValue);
+                                    dadosAgroup[0] += Ultil.AjustaPH(Convert.ToDouble(hs.attrValue));
                                     NotNull[0] = false;
                                 }
                                 break;
@@ -303,7 +304,7 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[1]++;
-                                    dadosAgroup[1] += Convert.ToDouble(hs.attrValue);
+                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Convert.ToDouble(hs.attrValue));
                                     NotNull[1] = false;
                                 }
                                 break;
@@ -327,7 +328,7 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[4]++;
-                                    dadosAgroup[4] += Convert.ToDouble(hs.attrValue);
+                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Convert.ToDouble(hs.attrValue));
                                     NotNull[4] = false;
                                 }
                                 break;
@@ -389,6 +390,7 @@ namespace SeedingPrecision.Service
             zeraVetores(dadosAgroup, contadores, NotNull);
         }
     
+        
         public async Task<IEnumerable<SensorModel>> TakeHistorysBySensor(string Sensor)
         {
             var hisfiltrado = his.OrderBy(a => a.recvTime).Where(a => a.attrName == Sensor).ToList();

@@ -22,6 +22,12 @@ namespace SeedingPrecision.Controllers
         {
             var service = new StatusAtualService();
             var result = await service.LoadData();
+            foreach(StatusAtualResponse sar in result)
+            {
+                sar.pH.value = Ultil.AjustaPH(sar.pH.value);
+                sar.luminosidade.value = Ultil.AjustaLuminnosidade(sar.luminosidade.value);
+                sar.humidSolo.value = Ultil.AjustaUmidadeDoSolo(sar.humidSolo.value);
+            }
             return Ok(result);
         }
         public class filtros
