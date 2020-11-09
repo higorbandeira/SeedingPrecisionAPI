@@ -9,7 +9,7 @@ namespace SeedingPrecision
     {
         public static double AjustaPH(double PH)
         {
-            return (PH * 259.4339622641509) + 583.9622641509434;
+            return (PH - 583.9622641509434 / 259.4339622641509) ;
         }
         public static double AjustaUmidadeDoSolo(double HumidSol)
         {
