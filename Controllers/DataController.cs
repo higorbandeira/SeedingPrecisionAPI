@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.VisualBasic.CompilerServices;
 using MongoDB.Driver;
 using SeedingPrecision.Models.Responses;
 using SeedingPrecision.Service;
@@ -20,13 +21,18 @@ namespace SeedingPrecision.Controllers
         [HttpGet("loadData")]
         public async Task<ActionResult<List<StatusAtualResponse>>> LoadData()
         {
+            double maxima=0;
             var service = new StatusAtualService();
             var result = await service.LoadData();
             foreach(StatusAtualResponse sar in result)
             {
-                sar.pH.value = Ultil.AjustaPH(sar.pH.value);
-                sar.luminosidade.value = Ultil.AjustaLuminnosidade(sar.luminosidade.value);
+                maxima = Ultil.AchaLuminosidadeMaxima(maxima, sar.luminosidade.value);
+                sar.pH.value = Ultil.AjustaPH(sar.pH.value);                
                 sar.humidSolo.value = Ultil.AjustaUmidadeDoSolo(sar.humidSolo.value);
+            }
+            foreach (StatusAtualResponse sar in result)
+            {
+                sar.luminosidade.value = Ultil.AjustaLuminnosidade(sar.luminosidade.value, maxima);
             }
             return Ok(result);
         }
