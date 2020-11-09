@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using static SeedingPrecision.Models.Responses.AtributesResponse;
 
 namespace SeedingPrecision.Models.Responses
@@ -13,5 +14,6 @@ namespace SeedingPrecision.Models.Responses
         public TempAmbiente tempAmbiente { get; set; }
         public TempSolo tempSolo { get; set; }
         public PH pH { get; set; }
+        public DateTime Data { get; internal set; }
     }
 }
