@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualBasic.CompilerServices;
 using MongoDB.Driver;
+using RestSharp;
 using SeedingPrecision.Models.Responses;
 using SeedingPrecision.Service;
 using System;
@@ -88,6 +89,25 @@ namespace SeedingPrecision.Controllers
                 result.Add(aux);
             }
             return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet("getClima")]
+        public async Task<string> GetClima()
+        {
+            var client = new RestClient("http://wttr.in/");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse response = client.Execute(request);
+            string html = response.Content;
+
+            var inicial = html.IndexOf("<pre>");
+            var final = html.IndexOf("</pre>");
+            var length = final - inicial;
+
+            string result = html.Substring(inicial, length + 6);
+
+            return result;
         }
     }
 }
