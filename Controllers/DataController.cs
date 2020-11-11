@@ -95,7 +95,7 @@ namespace SeedingPrecision.Controllers
         [HttpGet("getClima")]
         public async Task<string> GetClima()
         {
-            var client = new RestClient("http://wttr.in/Itaquera?m");
+            var client = new RestClient("http://pt-br.wttr.in/Itaquera?m?2?T");
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
             IRestResponse response = client.Execute(request);
