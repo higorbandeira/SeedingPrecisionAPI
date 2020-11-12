@@ -107,7 +107,9 @@ namespace SeedingPrecision.Controllers
             var final = html.IndexOf("</pre>");
             var length = final - inicial;
 
-            string result = html.Substring(inicial, length + 6);
+            string result = html.Substring(inicial, length -27);
+            result = result.Replace("Localização: ", "")+ "</pre>";
+
 
             return result;
         }
