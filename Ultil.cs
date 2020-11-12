@@ -43,13 +43,23 @@ namespace SeedingPrecision
             double a = 0;
             if (!String.IsNullOrEmpty(num) && sep != null)
             {
-                for (int i = 0; i < 2 && i < sep.Length; i++)
+                a = Convert.ToDouble(sep[0]);
+                if (sep.Length > 1&&sep[1]!="0")
                 {
-                    a = Convert.ToDouble(sep[i]) / (i + 1);
-                }
-                return a;
+                    int b =0;
+                    if (sep[1].Length > 2)
+                    {
+                        b = Convert.ToInt32(Convert.ToInt32(sep[1]) / Math.Pow(10, (sep[2].Length - 2)));
+                    }
+                    if (sep[1].Length == 1)
+                    {
+                        b = Convert.ToInt32(Convert.ToInt32(sep[1])*10);
+                    }
+                    double c = Convert.ToDouble(b);
+                    a += (c/100);
+                }                
             }
-            else return 0;
+            return a;
         
         }
         public static double AjustaDouble(double num)

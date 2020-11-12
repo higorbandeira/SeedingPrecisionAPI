@@ -337,8 +337,7 @@ namespace SeedingPrecision.Service
                             case "luminosidade":
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
-                                    contadores[1]++;
-                                    
+                                    contadores[1]++;                                    
                                     dadosAgroup[1] += Ultil.AjustaLuminnosidade(Ultil.AjustaDouble(hs.attrValue),luminosidadeMaxima);
                                     NotNull[1] = false;
                                 }
@@ -347,8 +346,6 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[2]++;
-                                    
-                                    var a = Ultil.AjustaDouble(hs.attrValue);
                                     dadosAgroup[2] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[2] = false;
                                 }
@@ -357,8 +354,6 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[3]++;
-                                    
-                                    var a = Ultil.AjustaDouble(hs.attrValue);
                                     dadosAgroup[3] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[3] = false;
                                 }
