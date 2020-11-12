@@ -103,9 +103,8 @@ namespace SeedingPrecision.Service
             foreach (HistoryStatus hs in his) 
             {
                 if (hs.attrName== "luminosidade") 
-                {
-                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                    luminosidadeMaxima = Ultil.AchaLuminosidadeMaxima(luminosidadeMaxima, Convert.ToDouble(hs.attrValue));
+                {                    
+                    luminosidadeMaxima = Ultil.AchaLuminosidadeMaxima(luminosidadeMaxima, Ultil.AjustaDouble(hs.attrValue));
                 }
             }
             foreach (HistoryStatus hs in his)
@@ -124,8 +123,7 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[0]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[0] += Ultil.AjustaPH(Convert.ToDouble(hs.attrValue));
+                                    dadosAgroup[0] += Ultil.AjustaPH(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[0] = false;
                                 }
                                 break;
@@ -133,8 +131,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[1]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Convert.ToDouble(hs.attrValue), luminosidadeMaxima);
+                                    
+                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Ultil.AjustaDouble(hs.attrValue), luminosidadeMaxima);
                                     NotNull[1] = false;
                                 }
                                 break;
@@ -142,9 +140,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[2]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[2] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[2] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[2] = false;
                                 }
                                 break;
@@ -152,9 +150,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[3]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[3] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[3] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[3] = false;
                                 }
                                 break;
@@ -162,8 +160,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[4]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Convert.ToDouble(hs.attrValue));
+                                    
+                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[4] = false;
                                 }
                                 break;
@@ -171,8 +169,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[5]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[5] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    dadosAgroup[5] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[5] = false;
                                 }
                                 break;
@@ -193,8 +191,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[0]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[0] += Ultil.AjustaPH(Convert.ToDouble(hs.attrValue));
+                                    
+                                    dadosAgroup[0] += Ultil.AjustaPH(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[0] = false;
                                 }
                                 break;
@@ -202,8 +200,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[1]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Convert.ToDouble(hs.attrValue), luminosidadeMaxima);
+                                    
+                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Ultil.AjustaDouble(hs.attrValue), luminosidadeMaxima);
                                     NotNull[1] = false;
                                 }
                                 break;
@@ -211,9 +209,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[2]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[2] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[2] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[2] = false;
                                 }
                                 break;
@@ -221,9 +219,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[3]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[3] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[3] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[3] = false;
                                 }
                                 break;
@@ -231,8 +229,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[4]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Convert.ToDouble(hs.attrValue));
+                                    
+                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[4] = false;
                                 }
                                 break;
@@ -240,8 +238,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[5]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[5] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    dadosAgroup[5] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[5] = false;
                                 }
                                 break;
@@ -262,8 +260,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[0]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[0] += Ultil.AjustaPH(Convert.ToDouble(hs.attrValue));
+                                    
+                                    dadosAgroup[0] += Ultil.AjustaPH(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[0] = false; 
                                 }
                                 break;
@@ -271,8 +269,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[1]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Convert.ToDouble(hs.attrValue), luminosidadeMaxima);
+                                    
+                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Ultil.AjustaDouble(hs.attrValue), luminosidadeMaxima);
                                     NotNull[1] = false;
                                 }
                                 break;
@@ -280,9 +278,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[2]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[2] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[2] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[2] = false;
                                 }
                                 break;
@@ -290,9 +288,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[3]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[3] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[3] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[3] = false;
                                 }
                                 break;
@@ -300,8 +298,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[4]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Convert.ToDouble(hs.attrValue));
+                                    
+                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[4] = false;
                                 }
                                 break;
@@ -309,8 +307,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[5]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[5] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    dadosAgroup[5] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[5] = false;
                                 }
                                 break;
@@ -331,8 +329,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[0]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[0] += Ultil.AjustaPH(Convert.ToDouble(hs.attrValue));
+                                    
+                                    dadosAgroup[0] += Ultil.AjustaPH(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[0] = false;
                                 }
                                 break;
@@ -340,8 +338,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[1]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Convert.ToDouble(hs.attrValue),luminosidadeMaxima);
+                                    
+                                    dadosAgroup[1] += Ultil.AjustaLuminnosidade(Ultil.AjustaDouble(hs.attrValue),luminosidadeMaxima);
                                     NotNull[1] = false;
                                 }
                                 break;
@@ -349,9 +347,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[2]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[2] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[2] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[2] = false;
                                 }
                                 break;
@@ -359,9 +357,9 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[3]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    var a = Convert.ToDouble(hs.attrValue);
-                                    dadosAgroup[3] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    var a = Ultil.AjustaDouble(hs.attrValue);
+                                    dadosAgroup[3] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[3] = false;
                                 }
                                 break;
@@ -369,8 +367,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[4]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Convert.ToDouble(hs.attrValue));
+                                    
+                                    dadosAgroup[4] += Ultil.AjustaUmidadeDoSolo(Ultil.AjustaDouble(hs.attrValue));
                                     NotNull[4] = false;
                                 }
                                 break;
@@ -378,8 +376,8 @@ namespace SeedingPrecision.Service
                                 if (!String.IsNullOrEmpty(hs.attrValue))
                                 {
                                     contadores[5]++;
-                                    hs.attrValue = hs.attrValue.Replace(".", ",");
-                                    dadosAgroup[5] += Convert.ToDouble(hs.attrValue);
+                                    
+                                    dadosAgroup[5] += Ultil.AjustaDouble(hs.attrValue);
                                     NotNull[5] = false;
                                 }
                                 break;
@@ -442,7 +440,7 @@ namespace SeedingPrecision.Service
                          select new SensorModel
                          {
                              Sensor = a.attrName,
-                             Valor = Convert.ToDouble(a.attrValue),
+                             Valor = Ultil.AjustaDouble(a.attrValue),
                              Data = a.recvTime
                          };
             return result;
