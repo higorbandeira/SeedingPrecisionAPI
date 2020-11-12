@@ -14,5 +14,6 @@ namespace SeedingPrecision.Models.Responses
         public List<double?> tempSolo { get; set; }
         public List<double?> pH { get; set; }
         public List<string> Data { get;  set; }
+        public bool? isEmpty { get; set; }
     }
 }

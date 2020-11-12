@@ -52,11 +52,13 @@ namespace SeedingPrecision.Controllers
             StatusHistoryRsponse result;
             if (hss.his.Count > 0)
             {
-                 result = await hss.AjusteHistorys(filter.Agrupamento);
+                result = await hss.AjusteHistorys(filter.Agrupamento);
+                result.isEmpty = false;
             }
             else
             {
                 result = new StatusHistoryRsponse();
+                result.isEmpty = true;
             }
             return Ok(result);
         }
